@@ -1,0 +1,257 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Hasibur Rahman} \\ \vspace{1pt}
+    Software Engineer, VivaSoft Ltd \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ (+880)1821484988 ~ 
+    \href{mailto:evanshareef@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ evanshareef@gmail.com} ~ 
+    \href{https://www.linkedin.com/in/evan-shareef/}{\raisebox{-0.2\height}\faLinkedin\ Hasibur Rahman} ~ 
+    \href{https://github.com/Evan-CSE/}{\raisebox{-0.2\height}\faGithub\ Evan} ~ 
+    \href{https://www.stopstalk.com/user/profile/Evan_Shareef}{\raisebox{-0.2\height}\faGlobe\ Hasibur Rahman} ~ 
+    \href{https://leetcode.com/evanshareef34/}{\raisebox{-0.2\height}\faCode\ EvanShareef34} \\
+    \vspace{-8pt}
+\end{center}
+
+%-----------TECHNICAL SKILLS-----------
+\vspace{1pt}
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \begin{tabularx}{\textwidth}{@{}l X@{}}
+            \textbf{Languages:} & \hspace{5pt} \textbf{Proficient}: TypeScript, JavaScript, C\#, C++, Python \hspace{2pt}\textbullet\hspace{1pt} \textbf{Familiar}: PHP, C, Java \\
+            \textbf{Stacks \& Tools:} & \hspace{5pt} AWS, CI/CD, gRPC, redis, \textbullet\hspace{1pt}\textbf{Database}: NoSQL, MySQL \textbullet\hspace{1pt}\textbf{Frameworks}: Express.js, ASP.NET, FastAPI && \hspace{5pt} Entity Framework, Spring.Net, MediatR, FluentAPI, LINQ \hspace{3pt} \textbullet\hspace{1pt}\textbf{Libraries}: React.js, React-native \textbullet\hspace{1pt} && \hspace{5pt}  \textbf{Version Control}: Git, Docker, \textbullet\hspace{1pt}\textbf{Testing Framework}: Mocha, Chai, XUnit && \hspace{5pt} \textbullet\hspace{1pt} \textbf{Observability}: Azure AppInsights \hspace{1pt} \textbf{Server}: Nginx
+        \end{tabularx}
+    }}
+\end{itemize}
+\vspace{-10pt}
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Chaldal}{Dhaka, Bangladesh}
+      {Software Engineer}{March 2023 -- June 2024}
+      \resumeItemListStart
+        % \resumeItem{Set up logs by analyzing customer behavior for \textbf{Personalized Catalog} using Observer, Singleton, and Adapter Patterns.}
+
+        \resumeItem{Prevented fraud activities related to Chaldal Free Delivery incentive, reducing a loss of \textbf{40tk per order} through database interaction with \textbf{Sargable Query}.}
+        \resumeItem{Implemented the address change flow feature for Chaldal, \textbf{used by 1M users}, which improved the overall \textbf{address saving method by 72\%}.}
+        \resumeItem{Participated in on-call rotations, debugging and mitigating issues in production.}
+        \resumeItem{\textbf{Tech Stack}: ASP .NET, React, React Native, TypeScript.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {VivaSoft Ltd}{Dhaka, Bangladesh}
+      {Software Engineer}{June 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{\textbf{Project: InspectorPC - Wigersma \& Sikkema}}
+        \resumeItem{\textbf{Reduced code size by about 85\%} by utilizing a \textbf{Railway Oriented Programming approach} to streamline error handling and chaining of multi-step tasks.}
+        \resumeItem{\textbf{Tech Stack}: Dot NET, VBScript, C\#, WPF.}
+      \resumeItemListEnd
+
+      \resumeItemListStart
+        \resumeItem{\textbf{Project: LLM based Product Chat}}
+        \resumeItem{Built overall system pipeline in \textbf{AWS EC2} instance.}
+        \resumeItem{Expose API endpoints to perform semantic search}
+        \resumeItem{\textbf{Tech Stack}: FastAPI, AWS, Docker, Git, Ollama, Redis as Vector DB}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{GST Online Admission System} $|$ \emph{PHP7, MySQL, Bootstrap}}{2021}
+          \resumeItemListStart
+            \resumeItem{Developed a web application for graduate admission at Jatiya Kabi Kazi Nazrul Islam University, handling approximately \textbf{2 lacs data} from all over Bangladesh.}
+            \resumeItem{Implemented merit generation process, processing about \textbf{29,000 applications} from the data.}
+            \resumeItem{Created PDF generation from the relational database.}
+            \resumeItem{Designed an admin panel system to manage admissions efficiently.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+      
+    \resumeSubHeadingListEnd
+\vspace{0pt}
+
+
+%-----------Achievements---------------
+\section{Awards}
+    
+
+\begin{itemize}[leftmargin=0in, label={}]
+    \item[]
+    \begin{tabularx}{\textwidth}{@{}l l X@{}}
+        \textbf{2021} &\hspace{5pt} \textbf{Top 10\% (185/1747), } & 
+        \hspace{45pt}\href{https://algo.codemarshal.org/contests/icpc-dhaka-21-preli/standings?page=1}{2021 ICPC Asia Dhaka Regional Online Preliminary} \faLink
+    \end{tabularx}
+    \vspace{-20pt}
+    \item[]
+    \begin{tabularx}{\textwidth}{@{}l l X@{}}
+        \textbf{2021} & \hspace{5pt} \textbf{Divisional Champion, } &
+        \hspace{43pt}\href{https://algo.codemarshal.org/contests/dhaka-21-main/standings}{ICPC Asia Dhaka Regional Contest 2021} \faLink
+    \end{tabularx}
+    \vspace{-20pt}
+    \item[]
+    \begin{tabularx}{\textwidth}{@{}l l X@{}}
+        \textbf{2022} & \hspace{5pt} \textbf{Top 12\% (206/1648)} &\hspace{49pt} \href{https://algo.codemarshal.org/contests/icpc-dhaka-22-preli/standings?page=1}{2022 ICPC Asia Dhaka Regional Online Preliminary}\faLink
+    \end{tabularx}
+\end{itemize}
+
+      
+\vspace{-8pt}
+%-----------EXTRACURRICULAR ACTIVITIES-----------
+\section{EXTRACURRICULAR ACTIVITIES}
+    \resumeItemListStart
+        \resumeItem{\textbf{1st Runner Up,} JKKNIU Research Presentation 2019}
+        \resumeItem{\textbf{4th,} JKKNIU SDC Public Speaking Competition 2019}
+        \resumeItem{\textbf{ICPC Trainer,} Midday Programming Club, JKKNIU}
+        \resumeItem{
+            \textbf{Contribution:} \underline{\href{https://github.com/lightoj-dev/problem-tutorials/blob/main/1041/en.md}{LOJ-1041: Road Construction Editorial}},
+            \hspace{3pt}
+            \underline{\href{https://www.linkedin.com/pulse/nosql-md-hasibur-rahman-l84ec?trk=public_profile_article_view}{NoSQL}},
+            \hspace{1pt}
+            \underline{\href{https://www.linkedin.com/pulse/object-wrapper-js-md-hasibur-rahman?trk=portfolio_article-card_title}{Object Wrapper in JS}}, 
+            \underline{\href{https://www.linkedin.com/pulse/garbage-collection-js-md-hasibur-rahman?trk=portfolio_article-card_title}{Garbage Collection in JS}}
+        }
+    \resumeItemListEnd
+    \vspace{-10pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Jatiya Kabi Kazi Nazrul Islam University}{March 2018 - Feb 2023}
+      {BSc in Computer Science \& Engineering}{Trishal, Mymensingh, Bangladesh}
+  \resumeSubHeadingListEnd
+
+
+\end{document}
