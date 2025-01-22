@@ -19,6 +19,7 @@ class JobLinkFinder:
             job_details = self.crawl_individual_job_link(job_link)
             json_str = (job_details._result.candidates[0].content.parts[0].text)
             data = json.loads(json_str)
+            data['link'] = job_link
             # print(data)
             with open('job_description.txt', 'a', encoding='utf-8') as file:
                 file.write(json_str + '\n\n\n\n\n\n')
@@ -35,7 +36,6 @@ class JobLinkFinder:
          details = self.gemini.get_job_relevancy_with_resume(resume=resume, job=job_details)
          json_str = (details._result.candidates[0].content.parts[0].text)
          data = json.loads(json_str)
-         print("\n\n\n")
          return json_str
         
 

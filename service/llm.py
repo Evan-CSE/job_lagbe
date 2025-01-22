@@ -40,7 +40,7 @@ class GeminiApiHandler:
         response = self.model.generate_content(
             prompt,
             generation_config=genai.GenerationConfig(
-                response_mime_type="application/json", response_schema=list[str]
+                response_mime_type="application/json"
             ),
         )
         return response
@@ -70,14 +70,14 @@ class GeminiApiHandler:
             f"JOB Object: {job}"
             f"Resume: {resume}"
             "Use this JSON schema:"
-            "List = {'score': float, 'mail': str}"
+            "List = {'score': float, 'mail': str, 'job_link': str}"
             "Return: List\n"
             "DONOT RETURN ANY RESPONSE OTHER THAN ONLY THE JSON SCHEMA I HAVE PROVIDED"
         )
         response = self.model.generate_content(
             prompt,
             generation_config=genai.GenerationConfig(
-                response_mime_type="application/json", response_schema=list[str]
+                response_mime_type="application/json"
             ),
         )
         return response
